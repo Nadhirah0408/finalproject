@@ -1,0 +1,119 @@
+
+  /* Change entire page background */
+body {
+    background-color: #f0f0f0; /* light gray */
+    background-image: url('image.jpg'); /* optional image */
+    background-size: cover; /* cover full page */
+    background-position: center;
+  }
+
+  /* Example: change background of search results only */
+  #search-results {
+    background-color: #ffffff; /* white background */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+header {
+  position: fixed; /* stay at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #bd9d81;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  z-index: 1000; /* stay above other elements */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* horizontal center */
+  justify-content: flex-start; /* or center for vertical center */
+  padding-top: 80px;       /* space for header if fixed */
+}
+
+
+
+h1 {
+  color: #bd9d81;
+  margin-bottom: 20px;
+}
+
+.link {
+  margin-left: 15px;
+  color: #bd9d81;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#search-section {
+  display: flex;            /* use flexbox */
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically if height is set */
+  gap: 10px;                /* space between input and buttons */
+  margin-top: 20px;         /* optional spacing from header */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #bd9d81;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #bd9d81;
+}
+
+#results, #readingList {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 260px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.card h3 {
+  color: #4d2c0d;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+textarea {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.read {
+  background-color: #e6d396;
+}
