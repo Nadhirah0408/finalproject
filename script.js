@@ -1,11 +1,11 @@
-// --- PAGE DETECTION ---
+//PAGE DETECTION
 if (document.getElementById('searchBtn')) {
   document.getElementById('searchBtn').addEventListener('click', searchBooks);
 }
 
 let readingList = JSON.parse(localStorage.getItem('readingList')) || [];
 
-// --- SEARCH BOOKS ---
+//SEARCH BOOKS
 function searchBooks() {
   const author = document.getElementById('authorSearch').value.trim();
   if (!author) return alert("Please enter an author name!");
@@ -50,7 +50,7 @@ function searchBooks() {
     });
 }
 
-// --- ADD BOOK ---
+//ADD BOOK
 function addBook(book) {
   if (readingList.find(b => b.title === book.title && b.author === book.author)) {
     alert("Book already in reading list!");
@@ -64,7 +64,7 @@ function addBook(book) {
   alert("Book added to reading list!");
 }
 
-// --- DISPLAY READING LIST ---
+//DISPLAY READING LIST
 function showReadingList() {
   const listDiv = document.getElementById('readingList');
   if (!listDiv) return;
@@ -96,20 +96,20 @@ function showReadingList() {
   });
 }
  
-// --- TOGGLE READ ---
+//TOGGLE READ
 function toggleRead(i) {
   readingList[i].read = !readingList[i].read;
   saveList();
   showReadingList();
 }
 
-// --- UPDATE SUMMARY ---
+//UPDATE SUMMARY
 function updateSummary(i, text) {
   readingList[i].summary = text;
   saveList();
 }
 
-// --- DELETE BOOK ---
+//DELETE BOOK
 function deleteBook(i) {
   if (confirm("Remove this book?")) {
     readingList.splice(i, 1);
@@ -118,10 +118,10 @@ function deleteBook(i) {
   }
 }
 
-// --- SAVE ---
+//SAVE
 function saveList() {
   localStorage.setItem('readingList', JSON.stringify(readingList));
 }
 
-// --- LOAD READING LIST PAGE ---
+//LOAD READING LIST PAGE
 showReadingList();
